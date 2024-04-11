@@ -1,14 +1,13 @@
-import { createContext } from 'react'
-import First from './components/First'
-import UserProvider from './Context/UserProvider'
+import { BrowserRouter,Routes,Route } from "react-router-dom"
+import HomePage from "./Pages/HomePage"
+import Cources from "./Pages/Cources"
 
 function App() {
   return (
-    <>
-    <UserProvider>
-    <First />
-    </UserProvider>
-    </>
+   <Routes>
+    <Route path="/" element={<HomePage/>} />
+    <Route path="cources" element={<Cources/>} />
+   </Routes>
   )
 }
 
